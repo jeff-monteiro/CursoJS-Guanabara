@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Nacionalidade</title>
+    <style>
+        input.button{
+            background: rgb(212, 96, 96);
+        }
+        h2{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        nav{
+            background: rgb(212, 96, 96);
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <h2>NacioTeste</h2>
+    </nav>
+    
+    Insira o país em que você vive: <input type="text" name='testN' id='testN'>
+    <input class='button' type="button" value="VERIFICAR" onclick='testar()'>
+    <div id='res'></div>
+
+    <script>
+        function testar(){
+            var txtn = window.document.getElementById('testN')
+            var res = window.document.querySelector('div#res')
+            var país = testN.value
+
+            if(país != 'Brasil'){
+                res.innerHTML += `Você está vivendo fora do Brasil, Você é estrangeiro!`
+            }else{
+                res.innerHTML += `Você mora no ${país}, então você é brasileiro!` 
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
